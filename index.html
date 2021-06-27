@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>おはよう</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .picbox {
+            background: url("C:\\Users\\lee\\Desktop\\romain-kurdi-apothicary-shop.jpg") no-repeat;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .div1 {
+            width: 100%;
+            height: 33%;
+        }
+
+        .minibox {
+            float: left;
+            width: 25%;
+            height: 100%;
+            /* background-color: skyblue;
+            border: 1px solid blue;
+            box-sizing: border-box; */
+        }
+
+        .div2 {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 33%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="picbox">
+        <div class="div1">
+            <div class="minibox" id="1"></div>
+            <div class="minibox" id="2"></div>
+            <div class="minibox" id="3"></div>
+            <div class="minibox" id="4"></div>
+        </div>
+        <div class="div2">
+            <div class="minibox" id="5"></div>
+            <!-- <div class="minibox" id="6"></div> -->
+            <!-- <div class="minibox" id="7"></div>
+            <div class="minibox" id="8"></div> -->
+        </div>
+    </div>
+    <script>
+        var list = {
+            q: '知乎',
+            w: 'bili',
+            e: '其乐',
+            r: 'wolai',
+            a: '慕课网'
+        }
+        var web_list = [
+            'https://www.zhihu.com/',
+            'http://www.bilibili.com/',
+            'https://withpinbox.com/',
+            'https://www.wolai.com/',
+            'https://www.imooc.com/u/index/allcourses',
+        ]
+
+        console.log(list);
+        document.onkeyup = function (event) {
+            // document.onkeydown = function (e) {
+            //     alert(e.keyCode);
+            // }
+            // q
+            if (event.keyCode === 81) {
+                window.location.href = 'https://www.zhihu.com/';
+            }
+            // w
+            if (event.keyCode === 87) {
+                window.location.href = 'http://www.bilibili.com/';
+            }
+            // e
+            if (event.keyCode === 69) {
+                window.location.href = 'https://withpinbox.com/';
+            }
+            // r
+            if (event.keyCode === 82) {
+                window.location.href = 'https://www.wolai.com/sora';
+            }
+            // a
+            if (event.keyCode === 65) {
+                window.location.href = 'https://class.imooc.com/sc/107/learn';
+            }
+            // // s
+            // if (event.keyCode === 83) {
+            //     window.location.href = 'https://www.baidu.com';
+            // }
+            // // d
+            // if (event.keyCode === 68) {
+            //     window.location.href = 'https://www.baidu.com';
+            // }
+            // // f
+            // if (event.keyCode === 70) {
+            //     window.location.href = 'https://www.baidu.com';
+            // }
+        };
+        let p = document.getElementsByClassName('minibox');
+        let i = 0;
+        for (const webKey of p) {
+            const n = `${web_list[i]}`;
+            webKey.onclick = () => { location.href = n };
+            i++;
+        }
+    </script>
+</body>
+
+</html>
