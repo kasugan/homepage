@@ -10,17 +10,17 @@
 
 <body>
     <div class="picbox">
-        <div class="div1">
-            <div class="minibox" id="1"></div>
-            <div class="minibox" id="2"></div>
-            <div class="minibox" id="3"></div>
-            <div class="minibox" id="4"></div>
+        <div class="div1 ">
+            <div class="minibox dynamic-border" id="1"></div>
+            <div class="minibox dynamic-border" id="2"></div>
+            <div class="minibox dynamic-border" id="3"></div>
+            <div class="minibox dynamic-border" id="4"></div>
         </div>
         <div class="div2">
-            <div class="minibox" id="5"></div>
-            <!-- <div class="minibox" id="6"></div> -->
-            <!-- <div class="minibox" id="7"></div>
-            <div class="minibox" id="8"></div> -->
+            <div class="minibox dynamic-border" id="5"></div>
+            <!-- <div class="minibox dynamic-border" id="6"></div>
+            <div class="minibox dynamic-border" id="7"></div>
+            <div class="minibox dynamic-border" id="8"></div> -->
         </div>
     </div>
     <script>
@@ -40,43 +40,6 @@
         ]
 
         console.log(list);
-        document.onkeyup = function (event) {
-            // document.onkeydown = function (e) {
-            //     alert(e.keyCode);
-            // }
-            // q
-            if (event.keyCode === 81) {
-                window.location.href = 'https://www.zhihu.com/';
-            }
-            // w
-            if (event.keyCode === 87) {
-                window.location.href = 'http://www.bilibili.com/';
-            }
-            // e
-            if (event.keyCode === 69) {
-                window.location.href = 'https://withpinbox.com/';
-            }
-            // r
-            if (event.keyCode === 82) {
-                window.location.href = 'https://www.wolai.com/sora';
-            }
-            // a
-            if (event.keyCode === 65) {
-                window.location.href = 'https://class.imooc.com/sc/107/learn';
-            }
-            // // s
-            // if (event.keyCode === 83) {
-            //     window.location.href = 'https://www.baidu.com';
-            // }
-            // // d
-            // if (event.keyCode === 68) {
-            //     window.location.href = 'https://www.baidu.com';
-            // }
-            // // f
-            // if (event.keyCode === 70) {
-            //     window.location.href = 'https://www.baidu.com';
-            // }
-        };
         let p = document.getElementsByClassName('minibox');
         let i = 0;
         for (const webKey of p) {
