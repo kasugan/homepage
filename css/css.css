@@ -41,13 +41,38 @@ body {
 }
 
 .dynamic-border {
-  background: linear-gradient(0, #f66, #f66) no-repeat left top/0 2px,
-    linear-gradient(-90deg, #f66, #f66) no-repeat right top/2px 0,
-    linear-gradient(-180deg, #f66, #f66) no-repeat right bottom/0 2px,
-    linear-gradient(-270deg, #f66, #f66) no-repeat left bottom/2px 0;
+  background: linear-gradient(0, #3bb6ff, #3bb6ff) no-repeat left top/0 2px,
+    linear-gradient(-90deg, #3bb6ff, #3bb6ff) no-repeat right top/2px 0,
+    linear-gradient(-180deg, #3bb6ff, #3bb6ff) no-repeat right bottom/0 2px,
+    linear-gradient(-270deg, #3bb6ff, #3bb6ff) no-repeat left bottom/2px 0;
   cursor: pointer;
   transition: all 600ms;
 }
 .dynamic-border:hover {
   background-size: 100% 2px, 2px 100%, 100% 2px, 2px 100%;
+}
+.minibox {
+  position: relative;
+}
+.minibox p {
+  height: 48px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  font-family: "Hiragino Sans GB";
+  font-size: 40px;
+  line-height: 40px;
+  color: #fff;
+  -webkit-mask: radial-gradient(circle at 0% 50%, #000, transparent 10%);
+  -webkit-mask-size: 100%;
+  /* animation: scale 5s ease 0s infinite; */
+  transition: -webkit-mask-size 2s ease;
+}
+.minibox:hover p {
+  -webkit-mask-size: 950%;
 }

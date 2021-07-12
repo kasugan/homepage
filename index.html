@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>おはよう</title>
     <link rel="stylesheet" href="css/css.css">
-    <script src="js/index.js"></script>
+
 </head>
 
 <body>
@@ -18,36 +18,12 @@
         </div>
         <div class="div2">
             <div class="minibox dynamic-border" id="5"></div>
-            <!-- <div class="minibox dynamic-border" id="6"></div>
-            <div class="minibox dynamic-border" id="7"></div>
+            <div class="minibox dynamic-border" id="6"></div>
+            <!-- <div class="minibox dynamic-border" id="7"></div>
             <div class="minibox dynamic-border" id="8"></div> -->
         </div>
     </div>
-    <script>
-        var list = {
-            q: '知乎',
-            w: 'bili',
-            e: '其乐',
-            r: 'wolai',
-            a: '慕课网'
-        }
-        var web_list = [
-            'https://www.zhihu.com/',
-            'http://www.bilibili.com/',
-            'https://cubox.pro/web/inbox',
-            'https://www.wolai.com/',
-            'https://www.imooc.com/u/index/allcourses',
-        ]
-
-        console.log(list);
-        let p = document.getElementsByClassName('minibox');
-        let i = 0;
-        for (const webKey of p) {
-            const n = `${web_list[i]}`;
-            webKey.onclick = () => { location.href = n };
-            i++;
-        }
-    </script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
