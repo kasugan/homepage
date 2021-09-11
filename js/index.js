@@ -2,7 +2,7 @@
 var web_list = [
   ["https://www.zhihu.com/", "知乎"],
   ["http://www.bilibili.com/", "bili"],
-  ["https://cubox.pro/web/inbox", "cubox"],
+  ["https://cubox.pro/web/save/inbox", "cubox"],
   ["https://www.wolai.com/", "我来"],
   ["https://www.imooc.com/u/index/allcourses", "慕课"],
   ["https://leetcode-cn.com", "力扣"],
