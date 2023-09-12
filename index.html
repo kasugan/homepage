@@ -1,29 +1,56 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>おはよう</title>
-    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/css.css" />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div class="picbox">
-        <div class="div1 ">
-            <div class="minibox dynamic-border" id="1"></div>
-            <div class="minibox dynamic-border" id="2"></div>
-            <div class="minibox dynamic-border" id="3"></div>
-            <div class="minibox dynamic-border" id="4"></div>
-        </div>
-        <div class="div2">
-            <div class="minibox dynamic-border" id="5"></div>
-            <div class="minibox dynamic-border" id="6"></div>
-            <div class="minibox dynamic-border" id="7"></div>
-            <!-- <div class="minibox dynamic-border" id="8"></div> -->
-        </div>
+      <div class="div1">
+        <div class="minibox dynamic-border" id="1"></div>
+        <div class="minibox dynamic-border" id="2"></div>
+        <div class="minibox dynamic-border" id="3"></div>
+        <div class="minibox dynamic-border" id="4"></div>
+      </div>
+      <div class="div2">
+        <div class="minibox dynamic-border" id="5"></div>
+        <div class="minibox dynamic-border" id="6"></div>
+        <div class="minibox dynamic-border" id="7"></div>
+        <!-- <div class="minibox dynamic-border" id="8"></div> -->
+      </div>
     </div>
-    <script src="js/index.js"></script>
-</body>
-
+  </body>
 </html>
+<script>
+  // 定义列表页
+  var web_list = [
+    ["https://www.zhihu.com/", "知乎"],
+    ["http://www.bilibili.com/", "bili"],
+    ["https://cubox.pro/web/save/inbox", "cubox"],
+    ["https://www.wolai.com/", "我来"],
+    ["https://www.imooc.com/u/index/allcourses", "慕课"],
+    ["https://leetcode-cn.com", "力扣"],
+    ["https://juejin.cn", "掘金"],
+  ];
+
+  let p = document.getElementsByClassName("minibox");
+  let i = 0;
+  for (const webKey of p) {
+    const n = `${web_list[i][0]}`;
+    webKey.onclick = () => {
+      location.href = n;
+    };
+    i++;
+  }
+  i = 0;
+  for (const webName of p) {
+    let pName = document.createElement("p");
+    const n = `${web_list[i][1]}`;
+    pName.innerHTML = n;
+    pName.className = "radial";
+    webName.append(pName);
+    i++;
+  }
+</script>
